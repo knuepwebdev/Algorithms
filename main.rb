@@ -1,6 +1,7 @@
 require_relative 'quick_find'
+require_relative 'quick_union'
 
-algorithms = [QuickFind.new(10)]
+algorithms = [QuickFind.new(10), QuickUnion.new(10)]
 algorithms.each do |algorithm|
   puts "**#{algorithm.class}**"
   algorithm.union(4, 3)
