@@ -27,6 +27,8 @@ class ImprovedQuickUnion
 
   def root(object)  
     while (object != @ids[object]) do
+        #Compress the paths to the root (keeps trees shallower)
+      @ids[object] = @ids[@ids[object]]
       object = @ids[object]
     end
 
