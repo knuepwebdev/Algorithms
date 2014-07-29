@@ -1,13 +1,13 @@
-require_relative 'linked_stack'
+require_relative 'stack_of_strings'
 
-linked_stack = LinkedStack.new
+stack_of_strings = StackOfStrings.new
 input = gets.chomp
 
 while(input != '') do
   if (input == '-')
-    puts linked_stack.pop
+    puts stack_of_strings.pop
   else
-    linked_stack.push(input)
+    stack_of_strings.push(input)
   end
 
   input = gets.chomp
